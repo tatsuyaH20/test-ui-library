@@ -18,7 +18,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
       - name: Install Node Dependencies
-        run: npm ci
+        run: npm install
       - name: Build storybook
         run: npm run build-storybook
       - name: Upload Documents
