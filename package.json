@@ -2,20 +2,26 @@
   "name": "test-ui-library",
   "version": "1.0.0",
   "description": "お試しUIライブラリ",
-  "main": "index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rm -rf dist/ && run-p build:*",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "node ./scripts/build.mjs",
+    "build:css": "tailwindcss -i ./app/globals.css -o ./dist/output.css",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "biome lint ./{app,components}",
     "format": "biome format ./{app,components} --write",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "glob": "^11.0.0",
+    "next": "14.2.17",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.17"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -31,6 +37,8 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "esbuild": "0.24.0",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8",
     "storybook": "^8.4.2",
     "tailwindcss": "^3.4.1",

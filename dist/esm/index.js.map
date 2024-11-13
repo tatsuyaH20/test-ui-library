@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../components/index.ts"],
+  "sourcesContent": ["export { Text } from './Text/Text';\n"],
+  "mappings": "AAAA,OAAS,QAAAA,MAAY",
+  "names": ["Text"]
+}

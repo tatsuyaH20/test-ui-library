@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../components/index.ts"],
+  "sourcesContent": ["export { Text } from './Text/Text';\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,kCAAAE,EAAAF,GAAA,IAAAG,EAAqB",
+  "names": ["components_exports", "__export", "__toCommonJS", "import_Text"]
+}
