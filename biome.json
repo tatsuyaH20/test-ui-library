@@ -45,7 +45,7 @@
   "overrides": [
     {
       "include": [
-        "next.config.ts",
+        "next.config.mjs",
         "tailwind.config.ts",
         "postcss.config.mjs"
       ]
