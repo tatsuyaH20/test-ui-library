@@ -2,10 +2,10 @@ import * as esbuild from 'esbuild';
 import { glob } from 'glob';
 
 (async () => {
-  const getComponentPath = await glob('./components/**/**.tsx', {
-    ignore: ['./components/**/**.stories.tsx', './components/**/**.test.tsx'],
+  const getComponentPath = await glob('../components/**/**.tsx', {
+    ignore: ['../components/**/**.stories.tsx', '../components/**/**.test.tsx'],
   });
-  const entryPoints = ['components/index.ts', ...getComponentPath];
+  const entryPoints = ['src/index.ts', ...getComponentPath];
   const ourDir = 'dist';
   const external = ['*'];
 

@@ -15,6 +15,6 @@
     "baseUrl": ".",
     "paths": {}
   },
-  "exclude": ["node_modules", "components/**/*.stories.tsx"],
-  "include": ["components/**/*"]
+  "exclude": ["node_modules", "src/components/**/*.stories.tsx"],
+  "include": ["src/components/**/*"]
 }

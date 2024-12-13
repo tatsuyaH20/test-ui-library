@@ -1,14 +1,8 @@
-import type { Config } from 'tailwindcss';
-
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: ['./src/components/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {
-      colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-      },
-    },
+    extend: {},
     fontSize: {
       sm: '1.2rem',
       base: '1.6rem',
@@ -21,18 +15,5 @@ export default {
     },
   },
   plugins: [],
-  corePlugins: {
-    preflight: false,
-    gridTemplateColumns: true,
-    gridColumn: true,
-    gridColumnStart: true,
-    gridColumnEnd: true,
-    boxShadowColor: false,
-    caretColor: false,
-    divideColor: false,
-    placeholderColor: false,
-    ringColor: false,
-    ringOffsetColor: false,
-    textDecorationColor: false,
-  },
-} satisfies Config;
+}
+

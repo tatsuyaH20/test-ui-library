@@ -2,56 +2,53 @@
   "name": "test-ui-library",
   "version": "1.0.0",
   "description": "お試しUIライブラリ",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/"
+  ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/cjs/index.d.ts",
   "scripts": {
-    "dev": "next dev",
+    "dev": "storybook dev -p 6006",
     "build": "rm -rf dist/ && run-p build:*",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "node ./scripts/build.mjs",
-    "build:css": "tailwindcss -i ./app/globals.css -o ./dist/output.css",
-    "start": "next start",
-    "lint": "biome lint ./{app,components}",
-    "format": "biome format ./{app,components} --write",
-    "storybook": "storybook dev -p 6006",
+    "build:js": "node ./src/scripts/build.mjs",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "lint": "biome lint ./{src,.storybook}",
+    "format": "biome format ./{src,.storybook} --write",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
-    "glob": "^11.0.0",
-    "next": "14.2.17",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@chromatic-com/storybook": "^3.2.2",
-    "@storybook/addon-essentials": "^8.4.2",
-    "@storybook/addon-interactions": "^8.4.2",
-    "@storybook/addon-onboarding": "^8.4.2",
-    "@storybook/addon-styling-webpack": "^1.0.1",
-    "@storybook/blocks": "^8.4.2",
-    "@storybook/nextjs": "^8.4.2",
-    "@storybook/react": "^8.4.2",
-    "@storybook/test": "^8.4.2",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "esbuild": "0.24.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8",
-    "storybook": "^8.4.2",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  },
+  "author": "",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tatsuyaH20/test-ui-library.git"
   },
-  "author": "tatsuyaH20",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tatsuyaH20/test-ui-library/issues"
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@chromatic-com/storybook": "^3.2.2",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "esbuild": "^0.24.0",
+    "glob": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "storybook": "^8.4.7",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "homepage": "https://tatsuyah20.github.io/test-ui-library/"
 }

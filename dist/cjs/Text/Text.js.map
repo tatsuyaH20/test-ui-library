@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../components/Text/Text.tsx"],
-  "sourcesContent": ["interface Props {\n  children: React.ReactNode;\n}\n\nexport const Text = ({ children }: Props) => {\n  return <p className=\"text-base text-neutral-950\">{children}</p>;\n};\n"],
-  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,UAAAE,IAAA,eAAAC,EAAAH,GAKS,IAAAI,EAAA,6BADIF,EAAO,CAAC,CAAE,SAAAG,CAAS,OACvB,OAAC,KAAE,UAAU,6BAA8B,SAAAA,EAAS",
-  "names": ["Text_exports", "__export", "Text", "__toCommonJS", "import_jsx_runtime", "children"]
-}
