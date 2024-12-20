@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const BaseImg: Story = {
   args: {
-    src: '/dummy.png',
+    src: '/dummy.webp',
     width: 600,
     height: 400,
   },
@@ -22,7 +22,7 @@ export const BaseImg: Story = {
 
 export const LinkImg: Story = {
   args: {
-    src: '/dummy.png',
+    src: '/dummy.webp',
     width: 600,
     height: 400,
     href: '/dummy',

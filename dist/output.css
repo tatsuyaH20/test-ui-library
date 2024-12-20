@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .grid {
   display: grid;
 }
@@ -580,4 +584,13 @@ video {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media(hover:hover) {
+  .hover\:opacity-75:where(:-moz-any-link, :enabled, summary):hover {
+    opacity: 0.75;
+  }
+  .hover\:opacity-75:where(:any-link, :enabled, summary):hover {
+    opacity: 0.75;
+  }
 }

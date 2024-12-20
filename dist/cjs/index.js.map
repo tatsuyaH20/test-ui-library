@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../src/index.ts"],
-  "sourcesContent": ["export { Text } from './components/Text/Text';\nexport { Grid } from './components/Grid/Grid';\n"],
-  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,kDAAAE,EAAAF,GAAA,IAAAG,EAAqB,kCACrBC,EAAqB",
-  "names": ["src_exports", "__export", "__toCommonJS", "import_Text", "import_Grid"]
+  "sourcesContent": ["export { Text } from './components/Text/Text';\nexport { Grid } from './components/Grid/Grid';\nexport { Img } from './components/Img/Img';\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,gEAAAE,EAAAF,GAAA,IAAAG,EAAqB,kCACrBC,EAAqB,kCACrBC,EAAoB",
+  "names": ["src_exports", "__export", "__toCommonJS", "import_Text", "import_Grid", "import_Img"]
 }
