@@ -98,7 +98,7 @@ const imageConversion = async () => {
           if (err) {
             return;
           }
-          console.log(`\u001b[1;32m ${fileName}を${outPutDir}に複製しました。`);
+          console.log(`\u001b[1;32m ${fileName}を${outPutDir}に複製しました。 \u001b[0m`);
         });
         return;
       }
@@ -112,7 +112,7 @@ const imageConversion = async () => {
             console.error(err);
             return;
           }
-          console.log(`\u001b[1;32m ${fileName}を${outPutDir}に変換しました。`);
+          console.log(`\u001b[1;32m ${fileName}を${outPutDir}に変換しました。 \u001b[0m`);
 
           // distPutDirがなければ作成する
           if (!fs.existsSync(distPutDir)) {
@@ -123,7 +123,9 @@ const imageConversion = async () => {
               console.log(err);
               return;
             }
-            console.log(`\u001b[1;32m ${outPutDir}/${outputFile}を${distPutDir}/${outputFile}に複製しました。`);
+            console.log(
+              `\u001b[1;32m ${outPutDir}/${outputFile}を${distPutDir}/${outputFile}に複製しました。 \u001b[0m`,
+            );
           });
         });
     }
