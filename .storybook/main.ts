@@ -12,7 +12,7 @@ const config: StorybookConfig = {
     reactDocgen: 'react-docgen-typescript',
   },
   framework: {
-    name: '@storybook/react-vite',
+    name: '@storybook/nextjs',
     options: {},
   },
   staticDirs: ['../src/public'],

@@ -1,0 +1,11 @@
+.github
+.storybook
+.vscode
+/node_modules
+/src
+storybook-static
+.editorconfig
+.gitignore
+postcss.config.*
+tailwind.config.*
+tsconfig.json

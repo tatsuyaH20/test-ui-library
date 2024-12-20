@@ -1,11 +1,12 @@
 {
   "name": "test-ui-library",
-  "version": "1.0.0",
-  "description": "お試しUIライブラリ",
+  "version": "0.0.0",
+  "description": "社内UIライブラリのテスト",
   "files": [
+    "dist/",
+    "biome.json",
     "LICENSE",
-    "README.md",
-    "dist/"
+    "README.md"
   ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -33,6 +34,7 @@
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-onboarding": "^8.4.7",
     "@storybook/blocks": "^8.4.7",
+    "@storybook/nextjs": "^8.4.7",
     "@storybook/react": "^8.4.7",
     "@storybook/react-vite": "^8.4.7",
     "@storybook/test": "^8.4.7",
@@ -47,6 +49,7 @@
     "vite": "^6.0.3"
   },
   "dependencies": {
+    "next": "^15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
