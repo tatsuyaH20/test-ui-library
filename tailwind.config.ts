@@ -16,6 +16,17 @@ export default {
       '4xl': '2.8rem',
       '5xl': '3.0rem',
     },
+    spacing: {
+      px: '1px',
+      0: '0',
+      2: '2px',
+      4: '4px',
+      8: '8px',
+      16: '16px',
+    },
+    width: {
+      xs: '20rem',
+    },
   },
   plugins: [
     plugin(({ addVariant }) => {

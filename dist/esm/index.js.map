@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../src/index.ts"],
-  "sourcesContent": ["export { Text } from './components/Text/Text';\nexport { Grid } from './components/Grid/Grid';\nexport { Img } from './components/Img/Img';\n"],
-  "mappings": "AAAA,OAAS,QAAAA,MAAY,yBACrB,OAAS,QAAAC,MAAY,yBACrB,OAAS,OAAAC,MAAW",
-  "names": ["Text", "Grid", "Img"]
+  "sourcesContent": ["export { Text } from './components/Text/Text';\nexport { Grid } from './components/Grid/Grid';\nexport { Img } from './components/Img/Img';\nexport { CustomLink } from './components/Link/Link';\n"],
+  "mappings": "AAAA,OAAS,QAAAA,MAAY,yBACrB,OAAS,QAAAC,MAAY,yBACrB,OAAS,OAAAC,MAAW,uBACpB,OAAS,cAAAC,MAAkB",
+  "names": ["Text", "Grid", "Img", "CustomLink"]
 }

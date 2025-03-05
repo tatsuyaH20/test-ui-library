@@ -1,9 +1,9 @@
-interface Props {
+type Props = {
   /** 子要素 */
   children: React.ReactNode;
   /** カラム */
   column: 1 | 2 | 3;
-}
+};
 
 const columnClass = {
   1: 'grid-cols-1',
