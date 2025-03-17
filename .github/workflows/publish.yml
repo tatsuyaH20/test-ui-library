@@ -1,0 +1,49 @@
+name: npm publish
+
+on:
+  push:
+    branches:
+      - 'main'
+
+# デフォルトシェルでパイプエラーを有効化
+defaults:
+  run:
+    shell: bash
+
+# 全パーミッションの無効化
+permissions: {}
+
+# 複数回同時に実行された場合に、前回のActionをキャンセルする
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#node-version-file
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: 'npm'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@askul'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run build
+        run: npm run build
+
+      - name: publish
+        run: npm publish
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
