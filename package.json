@@ -1,16 +1,15 @@
 {
-  "name": "test-ui-library",
+  "name": "@askul/test-ui-library",
   "version": "0.0.0",
   "description": "社内UIライブラリのテスト",
-  "files": [
-    "dist/",
-    "biome.json",
-    "LICENSE",
-    "README.md"
-  ],
+  "files": ["dist/", "biome.json", "LICENSE", "README.md"],
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/cjs/index.d.ts",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build-storybook": "storybook build",
